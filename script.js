@@ -53,7 +53,7 @@ function enviarWhats(e) {
   e.preventDefault();
   const nome = document.getElementById("nome").value;
   const mensagem = document.getElementById("mensagem").value;
-  const telefone = "5551999999999"; //Altere o número do telefone para o seu
+  const telefone = "5551999852157"; //Altere o número do telefone para o seu
 
   const msg = `Olá! Me chamo ${nome}. ${mensagem}.`;
   const msgFormatada = encodeURIComponent(msg);
