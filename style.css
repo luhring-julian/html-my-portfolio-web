@@ -313,6 +313,69 @@ h1 {
   line-height: 1.25rem;
 }
 
+/* Habilidades */
+.habilidades {
+  padding: 6rem 2rem;
+}
+
+.habilidades-titulo {
+  font-size: 3rem;
+  color: var(--claro);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.habilidades-conteudo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.habilidades-conteudo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+  flex: 1 1 250px;
+  min-width: 200px;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--vidro);
+  overflow: hidden;
+  transition: all 0.5s ease;
+  padding: 2vw;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.habilidades-conteudo-card-titulos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.habilidades-conteudo-card-descricao {
+  display: inline;
+  padding: 1.5rem;
+  color: rgba(226, 232, 240, 0.8);
+  line-height: 1.25rem;
+}
+
+.habilidades-conteudo-card-descricao:nth-of-type(2) {
+  float: right;
+}
+
+.habilidades-conteudo-card-progresso {
+  margin: 0 1.5rem;
+  width: 90%;
+}
+
 /* Contato */
 .contato {
   padding: 6rem 2rem;
@@ -458,6 +521,10 @@ footer {
   textarea {
     resize: none;
     min-height: 200px;
+  }
+
+  .habilidades-conteudo {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
 

@@ -43,6 +43,35 @@ document.addEventListener("DOMContentLoaded", function () {
   digitar();
 });
 
+//Animação barra de progresso
+document.addEventListener("DOMContentLoaded", function () {
+  const progresses = document.querySelectorAll(
+    ".habilidades-conteudo-card-progresso"
+  );
+
+  progresses.forEach((progress) => {
+    const max = parseInt(progress.getAttribute("max"));
+    const target = parseInt(progress.getAttribute("value"));
+    progress.value = 0;
+    let current = 0;
+
+    const speed = 10; //ms entre cada incremento
+    const step = Math.ceil(target / 40); // quanto aumenta por vez
+
+    function animate() {
+      if (current < target) {
+        current += step;
+        if (current > target) current = target;
+        progress.value = current;
+        requestAnimationFrame(animate);
+      } else {
+        progress.value = target; // garante que o valor final seja exato
+      }
+    }
+    animate();
+  });
+});
+
 //Máscara para estilização do número do telefone
 $(document).ready(function () {
   $("#telefone").mask("(00) 00000-0000");
