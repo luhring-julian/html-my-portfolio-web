@@ -362,7 +362,7 @@ h1 {
 
 .habilidades-conteudo-card-descricao {
   display: inline;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
   color: rgba(226, 232, 240, 0.8);
   line-height: 1.25rem;
 }
