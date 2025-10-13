@@ -91,3 +91,77 @@ function enviarWhats(e) {
 
   window.open(url, "_blank");
 }
+
+// Carregar mais formacao
+document.addEventListener("DOMContentLoaded", function () {
+  const formacao = Array.from(document.querySelectorAll(".formacao-card"));
+  const btnCarregar = document.getElementById("carregar-mais");
+  const initialVisible = 6; // exibir inicialmente
+  const increment = 3; // quantidade a adicionar por clique
+
+  if (!btnCarregar || formacao.length === 0) return;
+
+  // Função para atualizar visibilidade dos cards
+  function atualizarVisibilidade(visibleCount) {
+    formacao.forEach((el, idx) => {
+      if (idx < visibleCount) {
+        el.style.display = "";
+      } else {
+        el.style.display = "none";
+      }
+    });
+
+    if (visibleCount >= formacao.length) {
+      btnCarregar.style.display = "none";
+    } else {
+      btnCarregar.style.display = "";
+    }
+  }
+
+  // Inicializa: mostra apenas os primeiros `initialVisible`
+  atualizarVisibilidade(initialVisible);
+
+  let currentVisible = Math.min(initialVisible, formacao.length);
+
+  btnCarregar.addEventListener("click", function () {
+    currentVisible = Math.min(currentVisible + increment, formacao.length);
+    atualizarVisibilidade(currentVisible);
+  });
+});
+
+// Carregar mais projetos
+document.addEventListener("DOMContentLoaded", function () {
+  const projetos = Array.from(document.querySelectorAll(".projetos-card-link"));
+  const btnCarregar = document.getElementById("carregar-mais");
+  const initialVisible = 6; // exibir inicialmente
+  const increment = 3; // quantidade a adicionar por clique
+
+  if (!btnCarregar || projetos.length === 0) return;
+
+  // Função para atualizar visibilidade dos cards
+  function atualizarVisibilidade(visibleCount) {
+    projetos.forEach((el, idx) => {
+      if (idx < visibleCount) {
+        el.style.display = "";
+      } else {
+        el.style.display = "none";
+      }
+    });
+
+    if (visibleCount >= projetos.length) {
+      btnCarregar.style.display = "none";
+    } else {
+      btnCarregar.style.display = "";
+    }
+  }
+
+  // Inicializa: mostra apenas os primeiros `initialVisible`
+  atualizarVisibilidade(initialVisible);
+
+  let currentVisible = Math.min(initialVisible, projetos.length);
+
+  btnCarregar.addEventListener("click", function () {
+    currentVisible = Math.min(currentVisible + increment, projetos.length);
+    atualizarVisibilidade(currentVisible);
+  });
+});

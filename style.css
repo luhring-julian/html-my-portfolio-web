@@ -315,7 +315,7 @@ h1 {
 
 /* Habilidades */
 .habilidades {
-  padding: 6rem 2rem;
+  padding: 6rem 10vw;
 }
 
 .habilidades-titulo {
@@ -327,9 +327,9 @@ h1 {
 
 .habilidades-conteudo {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
+  grid-template-columns: 33% 33% 33%;
+  gap: 1rem;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -440,6 +440,22 @@ textarea {
   box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
 }
 
+/* Estilo específico para o botão 'Carregar mais' */
+.projetos-carregar-mais-wrap {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.botao-carregar-mais {
+  width: 40%; /* ocupa até 40% da largura do container */
+  max-width: 320px; /* limita a largura máxima para telas grandes */
+  min-width: 160px; /* largura mínima para garantir boa usabilidade */
+  padding: 0.9rem 1.25rem;
+  font-size: 1rem;
+}
+
 /* Footer */
 footer {
   background: var(--claro);
@@ -524,7 +540,11 @@ footer {
   }
 
   .habilidades-conteudo {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: 100%;
+  }
+
+  .botao-carregar-mais {
+    width: 100%; /* ocupa até 40% da largura do container */
   }
 }
 
